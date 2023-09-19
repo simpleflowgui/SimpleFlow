@@ -1,0 +1,45 @@
+##funcs end
+
+#------------------------------------------------------------
+#Add node parameter input methods (input file, input text,radio,dropdown)
+
+def getdatamethod(newmethods):
+    for i in newmethods:
+        if i in methods:
+            print(i)
+
+            methods[i] = newmethods[i]
+    info["methods"] = methods
+    
+
+
+def setinfo():
+    l = []
+    basefuncs = ["setinfo","exec","load","getdatamethod","value"]
+    for key, value in list(globals().items()):
+        if callable(value):
+            if "function" in str(type(value)) and key not in importedfuncs:
+                l.append(key)
+    for i in l:
+        if i not in basefuncs:
+            arr = ["CustomNode",i]
+            info["funcs"].append(arr)
+            methods[i] = {}
+
+def exec(nodename,inps):
+    out = globals()[nodename](inps)
+    json_object = json.dumps(out, indent=4)
+    with open("./customnodeoutput.json","w") as file:
+        file.write(json_object)
+
+def load():
+    global info
+    info = {
+        "lib_name":os.path.basename(__file__).split(".")[0],
+        "color":color,
+        "funcs":[
+        ]
+    }
+    setinfo()
+    getdatamethod(newmethods)
+    return info

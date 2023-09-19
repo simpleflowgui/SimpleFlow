@@ -1,0 +1,30 @@
+import os, json,sys
+sys.path.append('../Nodes.py')
+from Nodes import writelog
+
+
+info = {
+    "lib_name":os.path.basename(__file__).split(".")[0],
+    "funcs":[
+    ]
+}
+methods = {
+
+}
+
+color = {}
+
+importedfuncs = []
+
+
+#Add your node functions here (function name is node name)
+'''
+
+example:
+
+def node1():                    ---> node1 is node name
+    print("node1")              ---> body of the function (function will print the string "node1")
+
+'''
+
+##funcs start

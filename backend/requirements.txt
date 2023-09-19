@@ -1,0 +1,17 @@
+imutils
+paho-mqtt
+numpy
+Flask
+Flask-Cors
+opencv-python
+Pillow
+pyautogui
+tqdm
+wget
+torch
+torchvision
+torchsummary
+matplotlib
+albumentations
+pycocotools
+ultralytics
