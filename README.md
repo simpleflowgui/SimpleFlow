@@ -26,7 +26,7 @@ sudo apt-get install python3-pip python-dev
 
 (Windows)
 
-Download and install https://nodejs.org/en/download
+Download and install https://www.python.org/downloads/windows/
 
 ## 3. Create a new React project using Vite
 ```code
