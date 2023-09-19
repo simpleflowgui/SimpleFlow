@@ -51,6 +51,11 @@ cd SimpleFlow
 ./setup.sh
 ```
 
+## 6. Run SimpleFlow
+```code
+simpleflow
+```
+
 
 
 
