@@ -1510,7 +1510,7 @@ function Flow() {
 
   
   const gotogithub = ()=>{
-    window.open("https://www.w3schools.com");
+    window.open("https://github.com/simpleflowgui/SimpleFlow");
   }
   
   const runit = () => {
