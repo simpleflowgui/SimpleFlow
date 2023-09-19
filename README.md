@@ -48,6 +48,7 @@ cd
 (Linux)
 ```code
 cd SimpleFlow
+sudo chmod +x setup.sh
 ./setup.sh
 ```
 
