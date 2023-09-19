@@ -28,18 +28,19 @@ sudo apt-get install python3-pip python-dev
 
 Download and install https://www.python.org/downloads/windows/
 
-## 3. Create a new React project using Vite
+## 3. Clone SimpleFlow github repository
 ```code
+git clone https://github.com/simpleflowgui/SimpleFlow
+```
+
+## 4. Create a new React project using Vite
+```code
+cd SimpleFlow
 npm create vite@latest my-react-flow-app -- --template react
 npm install reactflow --force
 cd my-react-flow-app
 npm install
-npm run dev
-```
-
-## 4. Clone SimpleFlow github repository
-```code
-git clone https://github.com/simpleflowgui/SimpleFlow
+cd
 ```
 
 ## 5. Run the setup file
