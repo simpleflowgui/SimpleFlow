@@ -31,7 +31,9 @@ Download and install https://www.python.org/downloads/windows/
 ## 3. Create a new React project using Vite
 ```code
 npm create vite@latest my-react-flow-app -- --template react
-npm install reactflow
+npm install reactflow --force
+cd my-react-flow-app
+npm install
 npm run dev
 ```
 
