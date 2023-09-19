@@ -1,0 +1,5 @@
+#!/bin/bash
+cd backend
+source cv/bin/activate
+python3 routes.py
+
