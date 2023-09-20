@@ -37,6 +37,7 @@ sudo apt-get install git
 ```
 
 (Windows)
+
 Download and install https://git-scm.com/download/win
 
 ## 4. Clone SimpleFlow github repository
