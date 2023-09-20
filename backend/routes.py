@@ -3,7 +3,10 @@ from app import create_app
 import webbrowser
 import Nodes
 import os,json, pyautogui, time
-from signal import SIGKILL
+try:
+	from signal import SIGKILL
+except:
+	from signal import SIGABRT
 from multiprocessing import Process, Queue
 
 def my_function(q,edges,inps,loopout,lf):
@@ -43,7 +46,10 @@ def uploadfile():
 def stopprocess():
 	with open("./processpid.txt","r") as file:
 		pid = file.read()
-	os.kill(int(pid), SIGKILL)
+	try:
+		os.kill(int(pid), SIGKILL)
+	except:
+		os.kill(int(pid), SIGABRT)
 	return "none"
 
 
