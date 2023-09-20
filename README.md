@@ -61,14 +61,14 @@ npm install
 
 (Linux)
 ```code
-cd SimpleFlow
+cd ..
 sudo chmod +x setup.sh
 ./setup.sh
 ```
 
 (Windows)
 ```code
-cd SimpleFlow
+cd ..
 setup.cmd
 install.cmd
 ```
