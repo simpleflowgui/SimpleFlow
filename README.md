@@ -1,6 +1,8 @@
 # SimpleFlow
 A simple to use node-based GUI for creating multipurpose flows, such as those for training models to perform computer vision tasks.
 
+<a href="alternative text"><img src="https://github.com/simpleflowgui/SimpleFlow/blob/main/simpleflow.png" align="middle" width="800" height="400"></a>
+
 # Installation
 ## 1. Install Node.js and npm
 
@@ -40,7 +42,6 @@ npm create vite@latest my-react-flow-app -- --template react
 npm install reactflow --force
 cd my-react-flow-app
 npm install
-cd
 ```
 
 ## 5. Run the setup file
@@ -52,9 +53,22 @@ sudo chmod +x setup.sh
 ./setup.sh
 ```
 
+(Windows)
+```code
+cd SimpleFlow
+setup.cmd
+install.cmd
+```
+
 ## 6. Run SimpleFlow
+(Linux)
 ```code
 simpleflow
+```
+
+(Windows)
+```code
+simpleflow.cmd
 ```
 
 
