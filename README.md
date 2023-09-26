@@ -85,5 +85,7 @@ simpleflow.cmd
 ```
 
 
+For all nodes guide [GitHub Pages]([https://pages.github.com/](https://simpleflowgui.github.io/nodes)https://simpleflowgui.github.io/nodes).
+
 
 
