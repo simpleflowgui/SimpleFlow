@@ -84,8 +84,19 @@ simpleflow
 simpleflow.cmd
 ```
 
+# Docs
 
 For all nodes guide [Nodes Guide](https://simpleflowgui.github.io/nodes)
+
+For creating your first flow [Flow Guide](https://simpleflowgui.github.io/flow)
+
+For how to get started with MQTT [MQTT Guide](https://simpleflowgui.github.io/mqtt)
+
+For how to create a custom library [Custom Library Guide](https://simpleflowgui.github.io/custom)
+
+
+
+
 
 
 
