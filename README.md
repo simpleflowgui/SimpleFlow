@@ -94,6 +94,8 @@ For how to get started with MQTT [MQTT Guide](https://simpleflowgui.github.io/mq
 
 For how to create a custom library [Custom Library Guide](https://simpleflowgui.github.io/custom)
 
+For how to use label studio for YOLO dataset [Label Studio Guide](https://simpleflowgui.github.io/label_studio)
+
 
 
 
