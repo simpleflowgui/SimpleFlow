@@ -36,7 +36,7 @@ for key, value in list(globals().items()):
         if "function" in str(type(value)):
             importedfuncs.append(key)
         
-newmethods={'ClassificationPrepareYOLO': {'0': ['file', 'Dataset Path','Folder'], '1': ['text', 'Dataset Name'], '2': ['radio', 'Dataset Folder Structure', ['Labeled Images', 'Class Folders']], '3': ['text', 'Train Images Percentage (%)'], '4': ['text', 'Test Images Percentage (%)'],'ClassificationPrepareTorch': {'0': ['file', 'Dataset Path','Folder'], '1': ['text', 'Dataset Name'], '2': ['radio', 'Dataset Folder Structure', ['Labeled Images', 'Class Folders']], '3': ['text', 'Train Images Percentage (%)'], '4': ['text', 'Test Images Percentage (%)']}},'YOLO_From_Label_Studio': {'0': ['file', 'Select Dataset Folder', 'Folder'], '1': ['text', 'Train Images Percentage (%)'], '2': ['text', 'Test Images Percentage (%)']}}
+newmethods={'ClassificationPrepareYOLO': {'0': ['file', 'Dataset Path','Folder'], '1': ['text', 'Dataset Name'], '2': ['radio', 'Dataset Folder Structure', ['Labeled Images', 'Class Folders']], '3': ['text', 'Train Images Percentage (%)'], '4': ['text', 'Test Images Percentage (%)']},'ClassificationPrepareTorch': {'0': ['file', 'Dataset Path','Folder'], '1': ['text', 'Dataset Name'], '2': ['radio', 'Dataset Folder Structure', ['Labeled Images', 'Class Folders']], '3': ['text', 'Train Images Percentage (%)'], '4': ['text', 'Test Images Percentage (%)']},'YOLO_From_Label_Studio': {'0': ['file', 'Select Dataset Folder', 'Folder'], '1': ['text', 'Train Images Percentage (%)'], '2': ['text', 'Test Images Percentage (%)']}}
 color={'ClassificationPrepareYOLO': '#32a852', 'ClassificationPrepareTorch': '#32a852','YOLO_From_Label_Studio': '#49b3c1'}
 
 
