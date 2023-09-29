@@ -373,7 +373,8 @@ def mainfunc(edges,inps,loopout,lf):
                     writelog(f'{str(i.split("_")[0])} Node in Progress...')
                 outs[i] = functs[str(i.split("_")[0])](inps[i])
         return outs
-    except:
+    except Exception as e: 
+        print(e)
         writelog("An error happened. Please check your terminal/console for more details, and restart the process")
         return {"null":"null"}
 
