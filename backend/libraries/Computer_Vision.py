@@ -551,7 +551,7 @@ def Train_Torch_Classify(inps):
                     num_epochs=int(inps["vars"]["Epochs Number"]))
     x = datetime.datetime.now()
     context_dict = {"model_path":model,"datetime":str(x.strftime("%d"))+"_"+str(x.strftime("%m"))+"_"+str(x.strftime("%y"))+"_"+str(x.strftime("%I"))+"_"+str(x.strftime("%M"))}
-    torch.save(model,f'../Models/Torch/{inps["prev_node"]["builder_name"]}+".__."+{context_dict["datetime"]}+"_"+{os.path.basename(data_dir)}+"_model.pt"')
+    torch.save(model,f'./Models/Torch/{inps["prev_node"]["builder_name"]}+".__."+{context_dict["datetime"]}+"_"+{os.path.basename(data_dir)}+"_model.pt"')
     classes = {}
     for i in range(0,len(class_names)):
                     classes[i] = class_names[i]         
