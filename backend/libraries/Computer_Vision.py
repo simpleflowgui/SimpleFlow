@@ -407,10 +407,15 @@ def Select_Model(inps):
     return {"model_name":inps["vars"]["Select Model"],"builder_name":inps["vars"]["Select Builder"],"outimagenode":inps["output_node"],"Dataset Path":DataSet}
 
 def Train_Torch_Classify(inps):
-    if "prev_node" not in inps or "Dataset Path" not in inps["prev_node"]:
-        data_dir = inps["vars"]["Dataset Path"]
+    if "prev_node" in inps :
+        if "Dataset Path" not in inps["prev_node"]:
+            data_dir = inps["vars"]["Dataset Path"]
+        elif inps["prev_node"]["Dataset Path"]!="":
+            data_dir = inps["prev_node"]["Dataset Path"]
+        else:
+            data_dir = inps["vars"]["Dataset Path"]
     else:
-        data_dir = inps["prev_node"]["Dataset Path"]
+        data_dir = inps["vars"]["Dataset Path"]
     data_transforms = {
         'train': torchvision.models.get_model_weights(inps["prev_node"]["builder_name"]).DEFAULT.transforms(),
         'val': torchvision.models.get_model_weights(inps["prev_node"]["builder_name"]).DEFAULT.transforms(),
