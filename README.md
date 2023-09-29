@@ -94,8 +94,7 @@ For how to get started with MQTT [MQTT Guide](https://simpleflowgui.github.io/mq
 
 For how to create a custom library [Custom Library Guide](https://simpleflowgui.github.io/custom)
 
-
-
+For tutorial videos [Simple Flow Youtube Channel](https://youtube.com/@SimpleFlow-pr6vy?si=D2S3IpeaQFZu_bFT)
 
 
 
