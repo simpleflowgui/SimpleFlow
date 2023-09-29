@@ -342,7 +342,7 @@ def Torch_Classify(inps):
         transforms = torchvision.models.get_model_weights(os.path.basename(inps["prev_node"]["model"])[:endstring]).DEFAULT.transforms()
         classfile = re.search("_model",os.path.basename(inps["prev_node"]["model"])).span()[0]
         model = torch.load(inps["prev_node"]["model"])
-        with open(os.path.basename(inps["prev_node"]["model"])[:classfile]+"_classes.txt","r") as f:
+        with open('./Models/Torch/'+os.path.basename(inps["prev_node"]["model"])[:classfile]+"_classes.txt","r") as f:
             data = f.read()
         data = data.split(",")
     else:
@@ -555,7 +555,7 @@ def Train_Torch_Classify(inps):
     classes = {}
     for i in range(0,len(class_names)):
                     classes[i] = class_names[i]         
-    with open(inps["prev_node"]["builder_name"]+".__."+context_dict["datetime"]+"_"+os.path.basename(data_dir)+'_classes.txt', 'w') as file:
+    with open('./Models/Torch/'+str(inps["prev_node"]["builder_name"])+".__."+str(context_dict["datetime"])+"_"+str(os.path.basename(data_dir))+"_classes.txt", 'w') as file:
             for i in  range(0,len(class_names)): 
                 if i < len(class_names)-1:
                     file.write(str(class_names[i])+",")
@@ -671,7 +671,7 @@ def Torch_Detect(inps):
         transform = T.ToTensor()
         endstring = re.search(".__.",inps["prev_node"]["model"]).span()[0]
         classfile = re.search("_model",inps["prev_node"]["model"]).span()[0]
-        with open(inps["prev_node"]["model"][:classfile]+"_classes.txt","r") as f:
+        with open('./Models/Torch/'+os.path.basename(inps["prev_node"]["model"])[:classfile]+"_classes.txt","r") as f:
             data = f.read()
         data = data.split(",")  
         if data[0] == "_":
@@ -959,7 +959,7 @@ def Train_Torch_Detect(inps):
     x = datetime.datetime.now()
     context_dict = {"datetime":str(x.strftime("%d"))+"_"+str(x.strftime("%m"))+"_"+str(x.strftime("%y"))+"_"+str(x.strftime("%I"))+"_"+str(x.strftime("%M"))}
     torch.save(model,inps["prev_node"]["builder_name"]+".__."+context_dict["datetime"]+"_"+os.path.basename(data_dir)+'_model.pt')
-    with open(inps["prev_node"]["builder_name"]+".__."+context_dict["datetime"]+"_"+os.path.basename(data_dir)+'_classes.txt', 'w') as file:
+    with open('./Models/Torch/'+str(inps["prev_node"]["builder_name"])+".__."+str(context_dict["datetime"])+"_"+str(os.path.basename(data_dir))+"_classes.txt", 'w') as file:
             for i in  range(0,len(data)): 
                 if i < len(data)-1:
                     file.write(str(data[i])+",")
