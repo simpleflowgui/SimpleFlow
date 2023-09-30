@@ -80,9 +80,14 @@ simpleflow
 ```
 
 (Windows)
+In cmd in SimpleFlow directory paste the following:
+
 ```code
 simpleflow.cmd
 ```
+
+or double-click on simpleflow.cmd file
+
 
 # Docs
 
