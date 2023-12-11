@@ -9,8 +9,9 @@ A simple to use node-based GUI for creating multipurpose flows, such as those fo
 (Linux)
 ```code
 sudo apt update
-sudo apt install Node.js
-sudo apt install npm
+sudo apt install curl
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm install node
 ```
 
 (Windows)
