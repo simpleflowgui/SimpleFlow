@@ -429,13 +429,6 @@ function CustomNode({ data, isConnectable }) {
                             if(data["datamethods"][i][2] && data["datamethods"][i][2]!="File" && data["datamethods"][i][2]!="Folder"){
                                 cont.className ="cont";
                                 for(let j=0;j<data["datamethods"][i][2].length;j++){
-                                    newel = document.createElement("label");
-                                    newel.innerHTML = data["datamethods"][i][2][j];
-                                    newel.id = "label_"+data["datamethods"][i][2][j]+"_"+ids[0];
-                                    newel.htmlFor = data["datamethods"][i][2][j]+"_"+ids[0];
-                                    if(!document.getElementById("label_"+data["datamethods"][i][2][j]+"_"+ids[0])){
-                                        cont.append(newel);
-                                    }
                                     newel = document.createElement(guidebook[data["datamethods"][i][0]]["element"]);
                                     newel.type = guidebook[data["datamethods"][i][0]]["type"]
                                     newel.id = data["datamethods"][i][2][j]+"_"+ids[0];
@@ -453,6 +446,15 @@ function CustomNode({ data, isConnectable }) {
                                         });
                                     }
                                     if(!document.getElementById(data["datamethods"][i][2][j]+"_"+ids[0])){
+                                        cont.append(newel);
+                                    }
+                                    newel = document.createElement("label");
+                                    newel.style.display = "inline-block";
+                                    newel.style.width = "90%";
+                                    newel.innerHTML = data["datamethods"][i][2][j];
+                                    newel.id = "label_"+data["datamethods"][i][2][j]+"_"+ids[0];
+                                    newel.htmlFor = data["datamethods"][i][2][j]+"_"+ids[0];
+                                    if(!document.getElementById("label_"+data["datamethods"][i][2][j]+"_"+ids[0])){
                                         cont.append(newel);
                                     }
                                     
